@@ -23,7 +23,15 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		
-		
+
+	</properties>
+<profiles>
+  <profile>
+    <id>sonar</id>		
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+	<properties>
  		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 		
@@ -37,9 +45,9 @@
 		<sonar.dynamicAnalysis>false</sonar.dynamicAnalysis>
 		<sonar.skipPackageDesign>true</sonar.skipPackageDesign>
 		<sonar.skipDesign>true</sonar.skipDesign>
-	</properties>
-
-
+   </properties>
+  </profile>
+</profiles>  
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
